@@ -6,17 +6,17 @@ import {
   Theme,
   Toolbar,
   Typography,
-} from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
-import clsx from "clsx";
-import React from "react";
-import MenuDrawer from "./MenuDrawer";
+} from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
+import clsx from 'clsx';
+import React from 'react';
+import MenuDrawer from './MenuDrawer';
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     appBar: {
-      transition: theme.transitions.create(["margin", "width"], {
+      transition: theme.transitions.create(['margin', 'width'], {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
       }),
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
     appBarShift: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
-      transition: theme.transitions.create(["margin", "width"], {
+      transition: theme.transitions.create(['margin', 'width'], {
         easing: theme.transitions.easing.easeOut,
         duration: theme.transitions.duration.enteringScreen,
       }),
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginRight: theme.spacing(2),
     },
     hide: {
-      display: "none",
+      display: 'none',
     },
   })
 );
@@ -73,7 +73,7 @@ const Navbar: React.FC<INavbar> = (props) => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            {title ?? "Website Portfolio"}
+            {title ?? 'Website Portfolio M152'}
           </Typography>
         </Toolbar>
       </AppBar>

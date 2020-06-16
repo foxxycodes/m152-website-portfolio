@@ -11,13 +11,12 @@ import {
   Theme,
   useTheme,
   Typography,
-} from "@material-ui/core";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import InboxIcon from "@material-ui/icons/Inbox";
-import MailIcon from "@material-ui/icons/Mail";
-import Logo from "../img/logo/foxxycodes.png";
-import React from "react";
+} from '@material-ui/core';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import InboxIcon from '@material-ui/icons/Inbox';
+import MailIcon from '@material-ui/icons/Mail';
+import React from 'react';
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme: Theme) =>
@@ -31,16 +30,16 @@ const useStyles = makeStyles((theme: Theme) =>
       background: theme.palette.primary.main,
     },
     drawerHeader: {
-      display: "flex",
-      alignItems: "center",
+      display: 'flex',
+      alignItems: 'center',
       padding: theme.spacing(0, 1),
       // necessary for content to be below app bar
       ...theme.mixins.toolbar,
-      justifyContent: "space-between",
+      justifyContent: 'space-between',
     },
     logo: {
       width: 30,
-      borderRadius: "10px",
+      borderRadius: '10px',
       marginRight: 25,
       marginLeft: 5,
     },
@@ -60,20 +59,25 @@ const MenuDrawer: React.FC<IMenuDrawer> = (props) => {
   return (
     <Drawer
       className={classes.drawer}
-      variant="persistent"
+      variant="temporary"
       anchor="left"
       open={open}
       classes={{
         paper: classes.drawerPaper,
       }}
+      onBackdropClick={() => onDrawerClose()}
     >
       <div className={classes.drawerHeader}>
-        <div style={{ display: "flex" }}>
-          <img src={Logo} alt="Logo" className={classes.logo} />
+        <div style={{ display: 'flex' }}>
+          <img
+            src="/assets/logo/foxxycodes.png"
+            alt="Logo"
+            className={classes.logo}
+          />
           <Typography variant="subtitle1">foxxycodes</Typography>
         </div>
         <IconButton onClick={onDrawerClose}>
-          {theme.direction === "ltr" ? (
+          {theme.direction === 'ltr' ? (
             <ChevronLeftIcon />
           ) : (
             <ChevronRightIcon />
@@ -82,7 +86,7 @@ const MenuDrawer: React.FC<IMenuDrawer> = (props) => {
       </div>
       <Divider />
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -93,7 +97,7 @@ const MenuDrawer: React.FC<IMenuDrawer> = (props) => {
       </List>
       <Divider />
       <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
+        {['All mail', 'Trash', 'Spam'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
