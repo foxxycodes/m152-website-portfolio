@@ -5,9 +5,10 @@ import {
   Paper,
   Theme,
   Typography,
-} from "@material-ui/core";
-import React from "react";
-import ImageGallery, { ReactImageGalleryItem } from "react-image-gallery";
+} from '@material-ui/core';
+import React from 'react';
+import ImageGallery, { ReactImageGalleryItem } from 'react-image-gallery';
+
 const generateItems = (length: number) => {
   const arr: ReactImageGalleryItem[] = [];
 
@@ -15,7 +16,7 @@ const generateItems = (length: number) => {
     arr.push({
       original: `/assets/gallery/originals/img_${i}.jpg`,
       thumbnail: `/assets/gallery/thumbnails/img_${i}.jpg`,
-      sizes: "",
+      sizes: '',
     });
   }
   return arr;
@@ -36,12 +37,16 @@ const Carousel: React.FC = (props) => {
         Carousel
       </Typography>
       <Divider />
-      <ImageGallery
-        showBullets
-        items={generateItems(12)}
-        lazyLoad
-        thumbnailPosition="top"
-      />
+      <div style={{ padding: 50 }}>
+        <ImageGallery
+          showBullets
+          autoPlay
+          lazyLoad
+          showThumbnails={false}
+          thumbnailPosition="top"
+          items={generateItems(12)}
+        />
+      </div>
     </Paper>
   );
 };

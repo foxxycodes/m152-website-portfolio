@@ -10,12 +10,12 @@ import {
   Theme,
   Typography,
   useTheme,
-} from "@material-ui/core";
-import PhotoCameraIcon from "@material-ui/icons/PhotoCamera";
-import ViewCarouselIcon from "@material-ui/icons/ViewCarousel";
-import DescriptionIcon from "@material-ui/icons/Description";
-import React from "react";
-import { Link } from "react-router-dom";
+} from '@material-ui/core';
+import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
+import ViewCarouselIcon from '@material-ui/icons/ViewCarousel';
+import DescriptionIcon from '@material-ui/icons/Description';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -24,18 +24,18 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     drawerHeader: {
       ...theme.mixins.toolbar,
-      color: "black",
+      color: 'black',
       background: theme.palette.primary.main,
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
     },
     logo: {
-      width: "20%",
+      width: '20%',
       borderRadius: 5,
       marginLeft: 20,
     },
-    link: { textDecoration: "none", color: "white" },
+    link: { textDecoration: 'none', color: 'white' },
   })
 );
 
@@ -51,12 +51,13 @@ const MenuDrawer: React.FC<IMenuDrawer> = (props) => {
 
   return (
     <Drawer
+      variant="temporary"
       className={classes.drawer}
-      anchor={"left"}
+      anchor={'left'}
       PaperProps={{
         style: {
           width: 220,
-          color: "white",
+          color: 'white',
           background: theme.palette.secondary.light,
         },
       }}
@@ -76,14 +77,14 @@ const MenuDrawer: React.FC<IMenuDrawer> = (props) => {
         <Link to="/gallery" className={classes.link} onClick={() => onClose()}>
           <ListItem button>
             <ListItemIcon>{<PhotoCameraIcon color="primary" />}</ListItemIcon>
-            <ListItemText primary={"Fotogallerie"}></ListItemText>
+            <ListItemText primary={'Fotogallerie'}></ListItemText>
           </ListItem>
         </Link>
 
         <Link to="/carousel" className={classes.link} onClick={() => onClose()}>
           <ListItem button>
             <ListItemIcon>{<ViewCarouselIcon color="primary" />}</ListItemIcon>
-            <ListItemText primary={"Carousel"}></ListItemText>
+            <ListItemText primary={'Carousel'}></ListItemText>
           </ListItem>
         </Link>
 
@@ -94,7 +95,7 @@ const MenuDrawer: React.FC<IMenuDrawer> = (props) => {
         >
           <ListItem button>
             <ListItemIcon>{<DescriptionIcon color="primary" />}</ListItemIcon>
-            <ListItemText primary={"Styleguide"}></ListItemText>
+            <ListItemText primary={'Styleguide'}></ListItemText>
           </ListItem>
         </Link>
       </List>

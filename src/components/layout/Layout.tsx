@@ -1,19 +1,19 @@
-import React from "react";
-import Footer from "./Footer";
-import Header from "./Header";
+import React from 'react';
+import Footer from './Footer';
+import Header from './Header';
 import {
   makeStyles,
   CssBaseline,
   Theme,
   createStyles,
-} from "@material-ui/core";
+} from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     content: {
-      width: "calc(100vw-30px)",
-      height: "100%",
-      overflow: "hidden",
+      width: 'calc(100vw-30px)',
+      height: '100%',
+      overflow: 'hidden',
       padding: 15,
       marginBottom: 20,
     },

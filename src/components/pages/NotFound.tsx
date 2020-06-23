@@ -1,17 +1,17 @@
-import { createStyles, makeStyles, Theme, Typography } from "@material-ui/core";
-import * as React from "react";
+import { createStyles, makeStyles, Theme, Typography } from '@material-ui/core';
+import * as React from 'react';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     wrapper: {
-      width: "90vw",
-      marginTop: "25%",
-      marginLeft: "auto",
-      marginRight: "auto",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
+      width: '90vw',
+      marginTop: '15%',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
     },
   })
 );

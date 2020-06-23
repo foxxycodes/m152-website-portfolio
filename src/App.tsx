@@ -1,28 +1,28 @@
-import { createMuiTheme, ThemeProvider } from "@material-ui/core";
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import BaconIpsum from "./components/BaconIpsum";
-import Layout from "./components/layout/Layout";
-import Carousel from "./components/pages/Carousel";
-import Gallery from "./components/pages/Gallery";
-import NotFound from "./components/pages/NotFound";
-import Styleguide from "./components/pages/Styleguide";
+import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import BaconIpsum from './components/BaconIpsum';
+import Layout from './components/layout/Layout';
+import Carousel from './components/pages/Carousel';
+import Gallery from './components/pages/Gallery';
+import NotFound from './components/pages/NotFound';
+import Styleguide from './components/pages/styleguide/Styleguide';
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#ffecb3",
-      light: "#ffffe5",
-      dark: "#cbba83",
+      main: '#ffecb3',
+      light: '#ffffe5',
+      dark: '#cbba83',
     },
     secondary: {
-      main: "#1976d2",
-      light: "#63a4ff",
-      dark: "#004ba0",
+      main: '#1976d2',
+      light: '#63a4ff',
+      dark: '#004ba0',
     },
   },
   typography: {
-    fontFamily: "Monospace",
+    fontFamily: 'Monospace',
     fontSize: 14,
   },
 });
